@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>创建组</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <style type="text/css">
+        .candidate-container{
+            width:155px;
+        }
+        .button-container{
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+        .save{
+            margin-left: 41px;
+        }
+        </style>
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>创建组</h5>
+                </div>
+
+                <div class="ibox-content">
+                    <form method="get" class="form-horizontal" id="info_form">
+                        <div class="form-group" id="groupNoBox">
+                            <label class="col-sm-1 control-label">组编号</label>
+                            <div class="col-sm-4">
+                                <input type="text" disabled class="form-control" id="groupNo" name="groupNo">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">组名称</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="groupName" name="groupName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">主管</label>
+                            <div class="col-sm-4">
+                                <select class="form-control m-b" name="account" id="leaders">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">组员ID</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="members-search">
+                            </div>
+                        </div>
+                        <div class="member_select_box">
+                            <form ACTION="" METHOD="POST" class="col-sm-12">
+                                <table border="0">
+                                    <tr>
+                                        <label class="col-sm-1 control-label"></label>
+                                        <td class="candidate-container">
+                                            <label>候选人</label>
+                                            <select multiple size="10" name="list1" class="col-sm-3 form-control m-b" id="candidate"></select>
+                                        </td>
+                                        <td>
+                                            <input type="button" class="btn btn-primary button-container" value="   >>   "
+                                                   onclick="move(this.form.list1,this.form.list2)" name="B1"><br>
+                                            <input type="button" class="btn btn-primary button-container" value="   <<   "
+                                                   onclick="move(this.form.list2,this.form.list1)" name="B2">
+                                        </td>
+                                        <td class="candidate-container">
+                                            <label>已选组员</label>
+                                            <select multiple size="10" name="list2" class="col-sm-3 form-control m-b" id="selectMem"></select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary save" type="submit" id="submit">保存内容</button>
+                                <!--<button class="btn btn-white" type="submit">取消</button>-->
+                            </div>
+                        </div>
+                </form>
+                <div class="hr-line-dashed"></div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="../../js/jquery.min.js?v=2.1.4"></script>
+<script src="../../js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../js/content.min.js?v=1.0.0"></script>
+<script src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script src="../../js/plugins/layer/laydate/laydate.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",})
+    });
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/team/edit_team.js"></script>
+</body>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/form_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:15 GMT -->
+</html>

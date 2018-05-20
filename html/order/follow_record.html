@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/table_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:01 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>跟踪记录</title>
+
+    <link href="../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>跟踪记录</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>跟进时间</th>
+                                <th>跟进人</th>
+                                <th>跟进状况</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr id="follow2">
+                                <!--<td>2018.1.5</td>-->
+                                <!--<td>小美</td>-->
+                                <!--<td>没钱</td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td>2018.1.7</td>-->
+                                <!--<td>小美</td>-->
+                                <!--<td>跑路了</td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td>2018.1.18</td>-->
+                                <!--<td>小美</td>-->
+                                <!--<td>被债主追杀</td>-->
+                            </tr>
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="5" class="footable-visible">
+                                    <ul class="pagination pull-right">
+                                        <li class="footable-page-arrow disabled"><a data-page="first"
+                                                                                    href="#first">«</a></li>
+                                        <li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a>
+                                        </li>
+                                        <li class="footable-page active"><a data-page="0" href="#">1</a></li>
+                                        <li class="footable-page"><a data-page="1" href="#">2</a></li>
+                                        <li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li>
+                                        <li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-1 control-label">跟进内容</label>
+                        <div class="col-sm-3 m-b-xs">
+                            <div class="input-group">
+                                <textarea class="form-control" placeholder="填写内容..." id="content"></textarea>
+                            </div>
+                        </div>
+                        <label class="col-sm-2 control-label">下次联系时间</label>
+                        <div class="col-sm-3 m-b-xs">
+                            <div class="input-group">
+                                <input type="text" class="input-sm form-control" id="nextTime">
+                            </div>
+                        </div>
+                        <label class="col-sm-1 control-label">天以后</label>
+                        <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary" onclick="follow_confirm()"> 确认</button> </span>
+                        <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary" onclick="goback()"> 取消</button> </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../../js/jquery.min.js?v=2.1.4"></script>
+<script src="../../js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script src="../../js/content.min.js?v=1.0.0"></script>
+<script src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script src="../../js/demo/peity-demo.min.js"></script>
+<script src="../../js/plugins/footable/footable.all.min.js"></script>
+<script src="../../js/plugins/layer/laydate/laydate.js"></script>
+<script src="../../js/client/client.js"></script>
+<script src="../../js/client/follow.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",})
+    });
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/table_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:01 GMT -->
+</html>

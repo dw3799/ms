@@ -1,0 +1,9 @@
+.clear-float{
+    clear: both;
+}
+.inline-label{
+    float: left;
+    display: inline-block;
+    line-height: 30px;
+    margin-right: 15px;
+}

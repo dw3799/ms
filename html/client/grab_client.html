@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抢客户</title>
+    <link href="../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="../../css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <style>
+        tfoot{
+            position: absolute;
+            bottom: 38px;
+            right: 34px;
+        }
+        .table>thead>tr>th{
+            border-top:0;
+        }
+        .ibox-content{
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title"><h5>抢客户</h5></div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <form id="form" onsubmit="return confirm();">
+                            <div class="col-sm-3 m-b-xs">
+                                <select class="input-sm form-control input-s-sm inline" id="source" name="source">
+                                    <option value="0" >客户来源</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 m-b-xs">
+                                <select class="input-sm form-control input-s-sm inline" id="type" name="type">
+                                    <option value="0" >客户类型</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 m-b-xs">
+                                <select class="input-sm form-control input-s-sm inline" id="country" name="country">
+                                    <option value="0">国籍</option>
+                                </select>
+                            </div>
+                            <span class="input-group-btn">
+                                <button type="reset" class="btn btn-sm btn-primary" value="Reset" id="resetbtn" > 重置</button> </span>
+                            <div class="clear-float"></div>
+                            <div class="col-sm-3 m-b-xs">
+                                <select class="input-sm form-control input-s-sm inline" id="level" name="level">
+                                    <option value="0">客户等级</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3 m-b-xs">
+                                <div class="input-group">
+                                    <input type="text" placeholder="客户姓名" class="input-sm form-control" id="name" name="name">
+                                </div>
+                            </div>
+                            <div class="col-sm-3 m-b-xs">
+                                <div class="input-group">
+                                    <input type="text" placeholder="客户邮箱" class="input-sm form-control" id="email" name="email">
+                                </div>
+                            </div>
+
+                            <span class="input-group-btn"><button type="button"
+                                                                  class="btn btn-sm btn-primary" id="submit"> 查询</button> </span>
+
+                            <div class="clear-float"></div>
+                            <div class="col-sm-3 m-b-xs">
+                                <select class="input-sm form-control input-s-sm inline" id="intention" name="intention">
+                                    <option value="0">客户意向</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="30">
+                        <thead>
+                        <tr>
+                            <th>客户编号</th>
+                            <th>客户名称</th>
+                            <th>国籍</th>
+                            <th>客户来源</th>
+                            <th>客户类型</th>
+                            <th>客户等级</th>
+                            <th>客户意向</th>
+                            <th>意向数量</th>
+                            <th>主营业务</th>
+                            <th>历史订单</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="follow1">
+
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5"  aria-label="Page navigation">
+                                <ul class="pagination  pull-right" id="firstNavChild">
+                                </ul>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="../../js/jquery.min.js?v=2.1.4"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js?v=3.3.6"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js?v=1.0.0"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/layer/laydate/laydate.js"></script>
+<script type="text/javascript" src="../../js/plugins/footable/footable.all.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="../../js/content.min.js?v=1.0.0"type="text/javascript"></script>
+<script type="text/javascript" src="../../js/plugins/footable/footable.all.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/client/grab_client.js"></script><script>
+    $(document).ready(function(){$(".footable").footable();});
+    laydate({elem: "#hello", event: "focus"});
+    var start = {
+        elem: "#start",
+        format: "YYYY/MM/DD hh:mm:ss",
+        min: laydate.now(),
+        max: "2099-06-16 23:59:59",
+        istime: true,
+        istoday: false,
+        choose: function (datas) {
+            end.min = datas;
+            end.start = datas
+        }
+    };
+    var end = {
+        elem: "#end",
+        format: "YYYY/MM/DD hh:mm:ss",
+        min: laydate.now(),
+        max: "2099-06-16 23:59:59",
+        istime: true,
+        istoday: false,
+        choose: function (datas) {
+            start.max = datas
+        }
+    };
+    laydate(start);
+    laydate(end);
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+
+</html>

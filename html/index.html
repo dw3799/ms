@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>主页</title>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <style>
+        .nav-header{
+            text-align: center;
+        }
+        .role-list{
+            list-style: none;
+            width: 100%;
+            margin-left: 0;
+            padding-left: 0;
+            background-color:#2f4050;
+        }
+        .role-list li{
+            padding: 3px 0;
+        }
+        #roleListUl{
+            display: none;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span><img alt="image" class="img-circle" src="../img/profile_small.jpg" /></span>
+
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <div class="block m-t-xs" id="userName"></div>
+                                    <div class="block m-t-xs" id="roleBox">
+                                        <div class="default-role" id="defaultRole"></div>
+                                        <ul class="role-list" id="roleListUl">
+                                        </ul>
+                                    </div>
+
+
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs" id="roleList">
+
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="admin-show">
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">我的客户</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="client/client.html">我的客户</a></li>
+                        </ul>
+                    </li>
+                    <li class=" staff-show">
+
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">我的客户</span><span class="fa arrow"></span></a>
+
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="client/client.html">我的客户</a></li>
+                            <li><a class="J_menuItem" href="client/potential_client.html?possible">潜在客户</a></li>
+                            <li><a class="J_menuItem" href="client/potential_client.html?ensure">成交客户</a></li>
+                            <li><a class="J_menuItem" href="client/edit_client.html">创建客户</a></li>
+                        </ul>
+                    </li>
+                    <li class="superviser-show">
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">我的客户</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level ">
+                            <li><a class="J_menuItem" href="client/client.html">我的客户</a></li>
+                            <li><a class="J_menuItem" href="client/edit_client.html">创建客户</a></li>
+                        </ul>
+                    </li>
+                    <li class="staff-show">
+                        <a class="J_menuItem"  href="client/grab_client.html">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">抢客户</span>
+                        </a>
+                    </li>
+                    <li class="superviser-show">
+                        <a class="J_menuItem"  href="client/grab_client.html">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">抢客户</span>
+                        </a>
+                    </li>
+                    <li class="admin-show">
+                        <a class="J_menuItem"  href="client/resource_pool.html">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">公共资源池</span>
+                        </a>
+                    </li>
+                    <!--<li>-->
+                        <!--<a class="J_menuItem"  href="order/orders.html">-->
+                            <!--<i class="fa fa fa-bar-chart-o"></i>-->
+                            <!--<span class="nav-label">我的订单</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="J_menuItem"  href="order/edit_order.html">-->
+                            <!--<i class="fa fa fa-bar-chart-o"></i>-->
+                            <!--<span class="nav-label">创建订单</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                   <!--
+                   <li>
+                        <a class="J_menuItem"  href="order_imformation.html">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">代办事项</span>
+                        </a>
+                    </li>
+                    -->
+                    <li>
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">权限管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="team/staff.html">人员维护</a>
+                            </li>
+                            <li><a class="J_menuItem" href="team/team.html">组查询</a>
+                            </li>
+                            <li><a class="J_menuItem" href="team/edit_team.html">创建组</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!--<li>-->
+                        <!--<a href="#"><i class="fa fa-table"></i> <span class="nav-label">仓库管理</span><span class="fa arrow"></span></a>-->
+
+                        <!--<ul class="nav nav-second-level">-->
+                            <!--<li><a class="J_menuItem" href="order/quality_test.html">质检管理</a>-->
+                            <!--</li>-->
+                            <!--<li><a class="J_menuItem" href="order/in_storage.html">入库</a>-->
+                            <!--</li>-->
+                            <!--<li><a class="J_menuItem" href="order/out_storage.html">出库</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--
+                    <li>
+                        <a  href="#">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">待办事项</span>
+                        </a>
+                    </li>
+                    -->
+                    <li>
+                        <a  class="J_menuItem"  href="basic/edit_rule.html">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">规则设置</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i>
+                </button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="client.html"><我的客户></我的客户></a>
+                    </div>
+                </nav>
+                <a href="#" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="client/client.html" frameborder="0" data-id="index_v1.html" seamless></iframe>
+            </div>
+
+        </div>
+        <!--右侧部分结束-->
+    </div>
+    <script type="text/javascript" src="../js/jquery.min.js?v=2.1.4"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js?v=3.3.6"></script>
+    <script type="text/javascript" src="../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script type="text/javascript" src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/layer/layer.min.js"></script>
+    <script type="text/javascript" src="../js/hplus.min.js?v=4.1.0"></script>
+    <script type="text/javascript" src="../js/contabs.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/pace/pace.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+
+</body>
+
+</html>

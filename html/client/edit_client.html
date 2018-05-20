@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建客户</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>创建客户</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-12 b-r">
+                        <form id="form" onSubmit="return confirm();" >
+                                <div class="form-group col-sm-3">
+                                    <label class="">客户来源</label>
+                                    <select class="form-control m-b" id='source' name="source" required="" aria-required="true"></select>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label class="">客户类型</label>
+                                    <select class="form-control m-b" id='type' name="type" required="" aria-required="true"></select>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label class="">客户国籍</label>
+                                    <select class="form-control m-b" id='country' name="country" required="" aria-required="true"></select>
+                                </div>
+                                <div class="clear-float"></div>
+                                <div class="form-group col-sm-3">
+                                    <label class="">客户名称</label>
+                                    <input type="text" class="form-control" name="name" required="" aria-required="true">
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label class="">电子邮箱</label>
+                                    <input type="text" class="form-control" name="email" required="" aria-required="true">
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label>主营业务</label>
+                                    <input type="text" class="form-control" name="mainBusiness" required="" aria-required="true">
+                                </div>
+
+                                <div class="clear-float"></div>
+
+                                <div class="form-group col-sm-3">
+                                    <label class="">客户意向</label>
+                                    <select class="form-control m-b" id="intention" name="intention"></select>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label class="">公司地址</label>
+                                    <input type="text" class="form-control" name="companyAddress">
+                                </div>
+
+
+                                <div class="clear-float"></div>
+
+                                <div class="form-group col-sm-3">
+                                    <label>联系电话</label>
+                                    <input type="text" class="form-control" name="contacts">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label>公司网址</label>
+                                    <input type="text" class="form-control" name="companyWebsite">
+                                </div>
+
+                                <div class="clear-float"></div>
+
+                                <div class="form-group col-sm-3">
+                                    <label>Whatsapp</label>
+                                    <input type="text" class="form-control" name="whatsapp">
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label>wechat</label>
+                                    <input type="text" class="form-control" name="wechat">
+                                </div>
+
+
+                                <div class="form-group col-sm-3">
+                                    <label>facebook</label>
+                                    <input type="text" class="form-control" name="facebook">
+                                </div>
+                                <div class="clear-float"></div>
+                                <div class="form-group col-sm-3">
+                                    <label class="">qq</label>
+                                    <input type="text" class="form-control" name="qq">
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label class="">Skype</label>
+                                    <input type="text" class="form-control" name="skype">
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label>Linkedin</label>
+                                    <input type="text" class="form-control" name="linkedin">
+                                </div>
+                                <div class="clear-float"></div>
+                                <div class="form-group col-sm-3">
+                                    <label>收货人</label>
+                                    <input type="text" class="form-control" name="consignee">
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label class="">联系电话</label>
+                                    <input type="text" class="form-control" name="telMobile">
+                                </div>
+
+                                <div class="form-group col-sm-3">
+                                    <label>邮政编码</label>
+                                    <input type="text" class="form-control" name="postalCode">
+                                </div>
+
+                                <div class="form-group col-sm-9">
+                                    <label>收货地址</label>
+                                    <input type="text" class="form-control" name="receivingAddress">
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-4 col-sm-offset-4">
+                                        <button class="btn btn-primary" id="submit">保存内容</button>
+                                        <button class="btn btn-white" id="cancel">取消</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery.min.js?v=2.1.4" type="text/javascript"></script>
+<script src="../../js/bootstrap.min.js?v=3.3.6" type="text/javascript"></script>
+<script src="../../js/content.min.js?v=1.0.0" type="text/javascript"></script>
+<script src="../../js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+<script src="../../js/plugins/layer/laydate/laydate.js" type="text/javascript"></script>
+<script src="../../js/plugins/validate/jquery.validate.min.js" type="text/javascript"></script>
+<script src="../../js/plugins/validate/messages_zh.min.js" type="text/javascript"></script>
+<script src="../../js/demo/form-validate-demo.min.js" type="text/javascript"></script>
+<script src="../../js/common.js" type="text/javascript" type="text/javascript"></script>
+<script src="../../js/client/edit_client.js" type="text/javascript"></script><script>
+    $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+</html>

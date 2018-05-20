@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/table_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:01 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>潜在客户</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>潜在客户</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="inline-label">客户编号</span>
+                            <div class="input-group"  style="float: left;">
+                                <input type="text" placeholder="客户编号" class="input-sm form-control" id="consumerNo" name="consumerNo">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <input type="text" placeholder="客户姓名" class="input-sm form-control" id="name" name="name">
+                            </div>
+                        </div>
+                        <div class="col-sm-3 m-b-xs">
+                            <select class="input-sm form-control input-s-sm inline" id="country" name="country">
+                            </select>
+                        </div>
+                        <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 重置</button> </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 m-b-xs">
+                            <select class="input-sm form-control input-s-sm inline" id="level" name="level">
+                            </select>
+                        </div>
+                        <div class="col-sm-3 m-b-xs">
+                            <select class="input-sm form-control input-s-sm inline" name="hasOrder" id="hasOrder">
+                            </select>
+                        </div>
+                        <div class="col-sm-3 control-label"></div>
+                        <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+
+                    </div>
+                    <div class="row">
+                        <!--<div class="form-group">-->
+                            <label class="col-sm-2 control-label">上次联系时间</label>
+                            <div class="col-sm-4">
+                                <input placeholder="开始日期" class="form-control layer-date" id="preContactTimeStart" name="preContactTimeStart">
+                                <input placeholder="结束日期" class="form-control layer-date" id="preContactTimeEnd" name="preContactTimeEnd">
+                            </div>
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                           <label class="col-sm-2 control-label">下次联系时间</label>
+                           <div class="col-sm-3">
+                               <input placeholder="开始日期" class="form-control layer-date" id="nextContactTimeStart" name="nextContactTimeStart">
+                               <input placeholder="结束日期" class="form-control layer-date" id="nextContactTimeEnd" name="nextContactTimeEnd">
+                           </div>
+                        <!--</div>-->
+                   </div>
+                   <div style="height: 50px;width: 100%"></div>
+
+                   <div class="table-responsive">
+                       <table class="table table-striped">
+                           <thead>
+                           <tr>
+
+                               <th>客户编号</th>
+                               <th>客户名称</th>
+                               <th>国籍</th>
+                               <th>客户等级</th>
+                               <th>邮箱</th>
+                               <th>当前是否有订单</th>
+                               <th>上次联系时间</th>
+                               <th>下次联系时间</th>
+                               <th>历史订单</th>
+                               <th>跟进客户</th>
+                               <th>回收</th>
+                           </tr>
+                           </thead>
+                           <tbody id="follow1"></tbody>
+                           <tfoot>
+                           <tr>
+                               <td colspan="5"  aria-label="Page navigation">
+                                   <ul class="pagination  pull-right" id="firstNavChild">
+                                   </ul>
+                               </td>
+                           </tr>
+                           </tfoot>
+                       </table>
+                   </div>
+
+               </div>
+           </div>
+
+
+
+            <div class="ibox-content staff-follow">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>跟踪记录</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>跟进时间</th>
+                                    <th>跟进人</th>
+                                    <th>跟进状况</th>
+                                </tr>
+                                </thead>
+                                <tbody id="follow2"></tbody>
+                            </table>
+                        </div>
+                        <div class="row"1>
+                            <label class="col-sm-1 control-label">跟进内容</label>
+                            <div class="col-sm-3 m-b-xs">
+                                <div class="input-group">
+                                    <textarea class="form-control" placeholder="填写内容..." id="content"></textarea>
+                                </div>
+                            </div>
+                            <label class="col-sm-2 control-label">下次联系时间</label>
+                            <div class="col-sm-3 m-b-xs">
+                                <div class="input-group">
+                                    <input type="text" class="input-sm form-control" id="day">
+                                </div>
+                            </div>
+                            <label class="col-sm-1 control-label">天以后</label>
+                            <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary" onclick="follow_confirm()"> 确认</button> </span>
+                            <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary" onclick="goback()"> 取消</button> </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+   </div>
+</div>
+<script src="../../js/jquery.min.js?v=2.1.4"></script>
+<script src="../../js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script src="../../js/content.min.js?v=1.0.0"></script>
+<script src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script src="../../js/demo/peity-demo.min.js"></script>
+<script src="../../js/plugins/layer/laydate/laydate.js"></script>
+<script src="../../js/plugins/footable/footable.all.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/client/potential_client.js"></script>
+<script>
+   $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+</script>
+<script>
+   var preContactTimeStart = {
+       elem: "#preContactTimeStart",
+       format: "YYYY/MM/DD hh:mm:ss",
+       min: laydate.now(),
+       max: "2099-06-16 23:59:59",
+       istime: true,
+       istoday: false,
+       choose: function (datas) {
+           preContactTimeEnd.min = datas;
+           preContactTimeEnd.start = datas
+       }
+   };
+   var preContactTimeEnd = {
+       elem: "#preContactTimeEnd",
+       format: "YYYY/MM/DD hh:mm:ss",
+       min: laydate.now(),
+       max: "2099-06-16 23:59:59",
+       istime: true,
+       istoday: false,
+       choose: function (datas) {
+           preContactTimeStart.max = datas
+       }
+   };
+   laydate(preContactTimeStart);
+   laydate(preContactTimeEnd);
+   var nextContactTimeStart = {
+       elem: "#nextContactTimeStart",
+       format: "YYYY/MM/DD hh:mm:ss",
+       min: laydate.now(),
+       max: "2099-06-16 23:59:59",
+       istime: true,
+       istoday: false,
+       choose: function (datas) {
+           nextContactTimeEnd.min = datas;
+           nextContactTimeEnd.start = datas
+       }
+   };
+   var nextContactTimeEnd = {
+       elem: "#nextContactTimeEnd",
+       format: "YYYY/MM/DD hh:mm:ss",
+       min: laydate.now(),
+       max: "2099-06-16 23:59:59",
+       istime: true,
+       istoday: false,
+       choose: function (datas) {
+           nextContactTimeStart.max = datas
+       }
+   };
+   laydate(nextContactTimeStart);
+   laydate(nextContactTimeEnd);
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/table_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:01 GMT -->
+</html>

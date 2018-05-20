@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/table_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:01 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>我的订单</title>
+
+    <link href="../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>我的订单</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-3 m-b-xs">
+                            <select class="input-sm form-control input-s-sm inline">
+                                <option value="0">订单编号</option>
+                                <option value="1">选项1</option>
+                                <option value="2">选项2</option>
+                                <option value="3">选项3</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 m-b-xs">
+                            <select class="input-sm form-control input-s-sm inline">
+                                <option value="0">订单状态</option>
+                                <option value="1">选项1</option>
+                                <option value="2">选项2</option>
+                                <option value="3">选项3</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 m-b-xs">
+                            <select class="input-sm form-control input-s-sm inline">
+                                <option value="0">客户名称</option>
+                                <option value="1">选项1</option>
+                                <option value="2">选项2</option>
+                                <option value="3">选项3</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-primary inline"> 重置</button>
+                    </div>
+                    <div class="row">
+
+                        <label class="col-sm-1 control-label">提交时间</label>
+                        <div class="col-sm-1" style="display: none">
+                            <input id="hello" class="laydate-icon form-control layer-date">
+                        </div>
+                        <div class="col-sm-3">
+                            <input placeholder="开始日期" class="form-control layer-date" id="start">
+                            <input placeholder="结束日期" class="form-control layer-date" id="end">
+                        </div>
+
+                        <label class="col-sm-1 control-label">交付时间</label>
+                        <div class="col-sm-1" style="display: none">
+                            <input id="hello2" class="laydate-icon form-control layer-date">
+                        </div>
+                        <div class="col-sm-3">
+                            <input placeholder="开始日期" class="form-control layer-date" id="start2">
+                            <input placeholder="结束日期" class="form-control layer-date" id="end2">
+                        </div>
+                        <label class="col-sm-1 control-label"></label>
+                        <button type="button" class="btn btn-sm btn-primary inline"> 搜索</button>
+
+                    </div>
+                    <div style="height: 50px;width: 100%"></div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>订单状态</th>
+                                <th>客户姓名</th>
+                                <th>业务员</th>
+                                <th>订单提交时间</th>
+                                <th>工厂交付时间</th>
+                                <th>操作</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>已付款</td>
+                                <td>小美</td>
+                                <td>业务员A</td>
+                                <td>2018-02-01</td>
+                                <td>2018-05-01</td>
+                                <td><a href="order_imformation.html">查看详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>已付款</td>
+                                <td>小美</td>
+                                <td>业务员B</td>
+                                <td>2018-02-01</td>
+                                <td>2018-05-01</td>
+                                <td><a href="order_imformation.html">查看详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>已付款</td>
+                                <td>小美</td>
+                                <td>业务员C</td>
+                                <td>2018-02-01</td>
+                                <td>2018-05-01</td>
+                                <td><a href="order_imformation.html">查看详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>已付款</td>
+                                <td>小美</td>
+                                <td>业务员D</td>
+                                <td>2018-02-01</td>
+                                <td>2018-05-01</td>
+                                <td><a href="order_imformation.html">查看详情</a></td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>已付款</td>
+                                <td>小美</td>
+                                <td>业务员E</td>
+                                <td>2018-02-01</td>
+                                <td>2018-05-01</td>
+                                <td><a href="order_imformation.html">查看详情</a></td>
+                            </tr>
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="5" class="footable-visible">
+                                    <ul class="pagination pull-right">
+                                        <li class="footable-page-arrow disabled"><a data-page="first" href="#first">«</a></li>
+                                        <li class="footable-page-arrow disabled"><a data-page="prev" href="#prev">‹</a></li>
+                                        <li class="footable-page active"><a data-page="0" href="#">1</a></li>
+                                        <li class="footable-page"><a data-page="1" href="#">2</a></li>
+                                        <li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li>
+                                        <li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../../js/jquery.min.js?v=2.1.4"></script>
+<script src="../../js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script src="../../js/content.min.js?v=1.0.0"></script>
+<script src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script src="../../js/demo/peity-demo.min.js"></script>
+<script src="../../js/plugins/footable/footable.all.min.js"></script>
+<script src="../../js/plugins/layer/laydate/laydate.js"></script>
+<script>
+    $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+</script>
+<script>
+    laydate({elem:"#hello",event:"focus"});var start={elem:"#start",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){end.min=datas;end.start=datas}};var end={elem:"#end",format:"YYYY/MM/DD hh:mm:ss",min:laydate.now(),max:"2099-06-16 23:59:59",istime:true,istoday:false,choose:function(datas){start.max=datas}};laydate(start);laydate(end);
+</script>
+<script>
+    laydate({elem: "#hello2", event: "focus"});
+    var start2 = {
+        elem: "#start2",
+        format: "YYYY/MM/DD hh:mm:ss",
+        min: laydate.now(),
+        max: "2099-06-16 23:59:59",
+        istime: true,
+        istoday: false,
+        choose: function (datas) {
+            end2.min = datas;
+            end2.start = datas
+        }
+    };
+    var end2 = {
+        elem: "#end2",
+        format: "YYYY/MM/DD hh:mm:ss",
+        min: laydate.now(),
+        max: "2099-06-16 23:59:59",
+        istime: true,
+        istoday: false,
+        choose: function (datas) {
+            start2.max = datas
+        }
+    };
+    laydate(start2);
+    laydate(end2);
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/table_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:01 GMT -->
+</html>

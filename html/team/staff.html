@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>人员维护</title>
+
+    <link href="../../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link href="../../css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../js/plugins/layer/skin/layer.css" >
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>人员维护</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="">新增人员</div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <form id="form1" onSubmit="return confirm();">
+                                <div class="col-sm-3">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="员工姓名" class="input-sm form-control"
+                                               id="userName1" required="" aria-required="true">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 m-b-xs">
+                                    <select class="input-sm form-control input-s-sm inline" id="role1"></select>
+                                </div>
+                                <div class="col-sm-3 m-b-xs">
+                                    <select class="input-sm form-control input-s-sm inline" id="team1"></select>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-primary inline" id="add"> 添加
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="ibox-title">人员查询</div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <form id="form2" onSubmit="return confirm();">
+                                <div class="col-sm-3">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="员工ID" class="input-sm form-control"
+                                               id="userID2">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="员工姓名" class="input-sm form-control"
+                                               id="userName2">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 m-b-xs">
+                                    <select class="input-sm form-control input-s-sm inline" id="role2"></select>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-primary inline" id="submit"> 查询
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div style="height: 50px;width: 100%"></div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+
+                                <th>选择</th>
+                                <th>员工ID</th>
+                                <th>员工姓名</th>
+                                <th>员工角色</th>
+                                <th>业务组</th>
+                                <th>创建时间</th>
+                                <th>操作</th>
+
+                            </tr>
+                            </thead>
+                            <tbody id="follow1">
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="5"  aria-label="Page navigation">
+                                    <ul class="pagination  pull-right" id="firstNavChild">
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../../js/jquery.min.js?v=2.1.4"></script>
+<script src="../../js/bootstrap.min.js?v=3.3.6"></script>
+<script src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script src="../../js/content.min.js?v=1.0.0"></script>
+<script src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script src="../../js/team/alert.layer.js"></script>
+<script src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script src="../../js/content.min.js?v=1.0.0"></script>
+<script src="../../js/plugins/layer/layer.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/team/staff.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",})
+    });
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+</html>
